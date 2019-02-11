@@ -1,6 +1,6 @@
 <%- include('./layouts/navbar.ejs')%>
  <div id="index-banner" class=" manPart parallax-container">
-  <div  class="section no-pad-bot">
+  <div id="advert"  class="section no-pad-bot">
     <div class="container">
       <br><br>
       <h1 class=" title header center  text-lighten-2">CheckOut</h1>
@@ -172,13 +172,38 @@
 
 <section id="contacts">
   <div class="container">
-  <div class="section">
-
-    <div class="row">
-      <div class="col s12 center">
-        <h3><i class="mdi-content-send brown-text"></i></h3>
-        <h4>Контакты</h4>
-        <p class="left-align light">Здесь скоро будет информация</p>
+    <div class="section">
+      <div class="row">
+        <div class="col s12 center">
+          <h3><i class="mdi-content-send brown-text"></i></h3>
+          <h3 class="contactUs">Свяжись с нами</h3>
+          <form  id="user-quest" action="/add-user" method="POST" class="col s12">
+          <div class="row">
+            <div class="input-field hoverable col s4">
+              <i class="material-icons prefix">contacts</i>
+              <input name="usernamequest"id="first_namequest" type="text" class="validate">
+              <label for="first_namequest">Имя</label>
+            </div>
+            <div class="input-field hoverable col s4">
+              <i class="material-icons prefix">contacts</i>
+              <input name="usersurnamequest" id="last_namequest" type="text" class="validate">
+              <label for="last_namequest">Фамилия</label>
+            </div>
+            <div class="input-field hoverable col s4">
+            <i class="material-icons prefix">account_circle</i>
+            <input name="phonequest" id="userphonequest" type="text" class="validate">
+            <label for="userphonequest">Номер телефона</label>
+          </div>
+          </div>
+          <div class="row">
+            <div class="input-field hoverable col s12">
+              <i class="material-icons prefix">email</i>
+              <textarea placeholder="Введите ваше сообщение" name="userQuest"  id="userQuest" class="materialize-textarea" data-length="320"></textarea>
+              <label for="userQuest">Сообщение</label>
+            </div>
+          </div>
+          <a  href="javascript:{}" onclick="document.getElementById('user-quest').submit();" class=" regButton btn right hoverable"><i class="large material-icons right">done</i>Отправить</a>
+        </form>
       </div>
     </div>
   </div>

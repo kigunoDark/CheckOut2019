@@ -22,6 +22,19 @@ $(document).ready(function() {
   });
 });
 
+
+$(document).ready(function() {
+  if (
+    $(window).scroll(function() {
+      if ($(window).scrollTop() > 300) {
+        $(".navAnim").addClass("blackNav");
+      } else {
+        $(".navAnim").removeClass("blackNav");
+      }
+    })
+  );
+});
+
 $('.dropdown-trigger').dropdown({
   closeOnClick: false,
   
