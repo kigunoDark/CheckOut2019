@@ -38,12 +38,40 @@
  #team{
    margin-top: -1.5%;
  }
+ .teamLogo{
+      background-size:cover;
+      background-attachment: fixed; 
+      background-image: linear-gradient( to right bottom, rgba(24, 22, 22, 0.9), rgba(17, 16, 16, 0.5)), url('../images/team.jpg'); 
+ }
+ .admSubmit{
+   display: none;
+   
+ }
+.log{
+ 
+  padding: 5%;
+  margin-bottom: 5%;
+}
+ .dropdown-trigger{
+
+   background: #01a4e2;
+   text-align: center;
+   border-radius: 5%;
+   border: 2px solid white;
+ }
+
+ .dropdown-trigger:hover{
+  background: white;
+  color: #01a4e2;
+  border: 2px solid #01a4e2;
+  border-radius: 0%;
+}
  .crons{
   box-shadow: 0 8px 6px -6px black;
-   background: #c05c61;
+   background: #01a4e2;
  }
  .link {
-   color: #c05c61;
+   color: #01a4e2;
    font-size: 20px;
    text-transform: uppercase;
    transition: 0.3s;
@@ -52,7 +80,7 @@
    color: white;
  }
  #index-banner{
-  border-bottom: 3px solid #c05c61;
+  border-bottom: 3px solid #01a4e2;
 
  }
  
@@ -76,7 +104,7 @@ nav .brand-logo {
   margin-top:-35%;
 }
 nav ul a:hover{
-  color:#c05c61;
+  color:#01a4e2;
 }
 
 p {
@@ -97,14 +125,15 @@ p {
   margin-left: 4%; 
 }
 .regButton{
-  background: white;
-  color: black;
+  background: #01a4e2;
+  color: white;
   font-weight: bold;
   transition: 0.3s;
+  
 }
 .regButton:hover{
-  background: #c05c61;
-  color: white;
+  background: white;
+  color: black;
   font-weight: bold;
 }
 .iconContent{
@@ -113,7 +142,7 @@ p {
   border: 3px solid #ffffff;
   text-shadow: 2px 2px 1px  black;
   box-shadow: 2px 2px 1px  black;
-  background:#c05c61; 
+  background:#01a4e2; 
   border-radius: 50%;
   margin-left: 35%;
   width: 28%;
@@ -130,7 +159,7 @@ p {
 }
 .title{
   margin-top: 20%;
-  color:#c05c61;
+  color:#01a4e2;
   text-transform: uppercase;
   font-weight: bold;
   text-shadow: 2px 2px 1px  black;
@@ -143,14 +172,18 @@ p {
   text-shadow: 2px 2px 1px  black;
 }
 .btnStyle{
-  border: 3px solid white;
-  color:white;
+  border: 3px solid #01a4e2;
+  color:#01a4e2;
   font-weight: bold;
   background: rgba(255,255,255,0);
 }
-
+.btnStyle:hover{
+  color:white;
+  background: #01a4e2;
+  border: 3px solid white;
+}
 .teamPart{
-  background-image: linear-gradient( to right bottom, rgba(24, 22, 22, 0.9), rgba(17, 16, 16, 0.5)), url('../images/team.jpg'); 
+ 
   background-size: cover;
   background-attachment: fixed;
   min-height: 680px;
@@ -159,7 +192,7 @@ p {
   color: rgba(255,255,255,.9);
 }
 .manPart {
-  background-image: linear-gradient( to right bottom, rgba(24, 22, 22, 0.9), rgba(17, 16, 16, 0.5)), url('../images/stavropol.jpg'); 
+  background-image: linear-gradient( to right bottom, rgba(29, 32, 32, 0.9), rgba(17, 16, 16, 0.5)), url('../images/stavropol.jpg'); 
   background-size: cover;
   box-shadow: 0 8px 6px -6px black;
   background-attachment: fixed;

@@ -1,6 +1,4 @@
 <%- include('./layouts/navbar.ejs')%>
-
-
  <div id="index-banner" class=" manPart parallax-container">
   <div  class="section no-pad-bot">
     <div class="container">
@@ -11,7 +9,7 @@
         <h5 class="navText header col s12 light">Все лучшие события вашего города прямо на карте.<br> Приходи и создавай свои события.</h5>
       </div>
       <div class="row center">
-        <a href="#register" id="download-button" class="btnStyle btn-large ">Регистрация</a>
+        <a href="#register" id="download-button" class=" menu btnStyle btn-large ">Регистрация</a>
       </div>
       <br><br>
 
@@ -64,35 +62,35 @@
   <div class="section no-pad-bot">
     <div class="container">
       <h3 class="regTitle"> Регистрация </h3>
-          <form class="col s14">
+          <form  id="add-user" action="/add-user" method="POST" class="col s14">
           <div class="row">
             <div class="input-field hoverable col s6">
               <i class="material-icons prefix">contacts</i>
-              <input id="first_name" type="text" class="validate">
+              <input name="username"id="first_name" type="text" class="validate">
               <label for="first_name">Имя</label>
             </div>
             <div class="input-field hoverable col s6">
               <i class="material-icons prefix">contacts</i>
-              <input id="last_name" type="text" class="validate">
+              <input name="usersurname" id="last_name" type="text" class="validate">
               <label for="last_name">Фамилия</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field hoverable col s6">
               <i class="material-icons prefix">account_circle</i>
-              <input id="username" type="text" class="validate">
+              <input name="nickname" id="username" type="text" class="validate">
               <label for="username">Никнейм</label>
             </div>
             <div class="input-field hoverable col s6">
               <i class="material-icons prefix">email</i>
-              <input id="email" type="email" class="validate">
+              <input name="email" id="email" type="email" class="validate">
               <label for="email">Email</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field hoverable col s6">
               <i class="material-icons prefix">vpn_key</i>
-              <input id="password" type="password" class="validate">
+              <input name="password" id="password" type="password" class="validate">
               <label for="password">Пароль</label>
             </div>
             <div class="input-field hoverable col s6">
@@ -101,7 +99,7 @@
               <label for="password2">Повторить пароль</label>
             </div>
           </div>
-          <a class=" regButton btn right hoverable"><i class="large material-icons right">done</i>register</a>
+          <a  href="javascript:{}" onclick="document.getElementById('add-user').submit();" class=" regButton btn right hoverable"><i class="large material-icons right">done</i>регистрация</a>
         </form>
     </div>
   </div>
@@ -126,25 +124,29 @@
   </div>
 </section>
 
-  <div id="team" class="parallax-container valign-wrapper">
-  <div class="section no-pad-bot">
-    <div class="container">
-      <div class="row center">
+
+
+  <section  id="team">
+<div class="container-wrap">
+    <div class="row">
+      <div class="teamLogo col s12 m12 center">        
+        <h1 class="moreInfoTitle"> Seals </h1>
       </div>
+     
     </div>
   </div>
-  <div class="parallax"><img src="./images/team.jpg" alt="Unsplashed background img 3"></div>
-  
-  </div>
+</section>
 
+
+<section id="contacts">
   <div class="container">
   <div class="section">
 
     <div class="row">
       <div class="col s12 center">
         <h3><i class="mdi-content-send brown-text"></i></h3>
-        <h4>Contact Us</h4>
-        <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+        <h4>Контакты</h4>
+        <p class="left-align light">Здесь скоро будет информация</p>
       </div>
     </div>
   </div>

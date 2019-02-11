@@ -2945,7 +2945,7 @@ ul.staggered-list li {
   padding-top: 20px;
   color: #fff;
   background-color: #1f1c1c;
-  border-top: 2px solid #c05c61;
+  border-top: 3px solid #01a4e2;
   height: 40%;
 }
 
@@ -5160,7 +5160,9 @@ small {
           transform-origin: 50% 0%;
   visibility: hidden;
 }
-
+.login{
+  margin-top: 3%;
+}
 .btn, .btn-large, .btn-small,
 .btn-flat {
   border: none;
@@ -5244,7 +5246,9 @@ small {
 
 .btn:focus, .btn-large:focus, .btn-small:focus,
 .btn-floating:focus {
-  background-color: #1d7d74;
+  background-color: #ffffff;
+  color: #01a4e2;
+  border: 2px solid #01a4e2;
 }
 
 .btn, .btn-large, .btn-small {
@@ -5541,15 +5545,16 @@ button.btn-floating {
 }
 
 .dropdown-content {
-  background-color: #fff;
+  background-color: rgba(1, 164, 226, 0.8);
+  border: 2px solid white;
   margin: 0;
   display: none;
-  min-width: 100px;
-  overflow-y: auto;
+  min-width: 300px;
+  overflow: hidden;
   opacity: 0;
   position: absolute;
-  left: 0;
-  top: 0;
+  left: 212px;
+  top: -38%;
   z-index: 9999;
   -webkit-transform-origin: 0 0;
           transform-origin: 0 0;
@@ -5561,7 +5566,7 @@ button.btn-floating {
 
 .dropdown-content li {
   clear: both;
-  color: rgba(0, 0, 0, 0.87);
+  color:white;;
   cursor: pointer;
   min-height: 50px;
   line-height: 1.5rem;
@@ -7591,7 +7596,7 @@ input[type=range]::-ms-thumb {
 }
 
 .sidenav li > a.btn:hover, .sidenav li > a.btn-large:hover, .sidenav li > a.btn-small:hover, .sidenav li > a.btn-large:hover {
-  background-color: #2bbbad;
+  background-color: #f4f8f8;
 }
 
 .sidenav li > a.btn-floating:hover {
