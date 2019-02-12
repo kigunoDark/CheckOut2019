@@ -6,5 +6,17 @@ exports.getMapPage = (req, res) => {
 }
 
 exports.postMapUser = (req, res) => {
-    res.redirect('/checkout-map');
+    res.redirect('/checkout-map');   
 }
+
+
+exports.prof = (req, res) => {
+    res.render("profile", {    pageTitle:"user-profile" });
+  };
+
+
+exports.logout = function(req, res) {
+    req.session.destroy(function(err) {
+      res.redirect("/");
+    });
+  };

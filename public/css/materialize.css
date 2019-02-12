@@ -5559,11 +5559,30 @@ button.btn-floating {
   -webkit-transform-origin: 0 0;
           transform-origin: 0 0;
 }
+.dropdown-content2 {
+  
+  background-color: rgba(1, 164, 226, 0.8);
+  border: 2px solid white;
+  margin: 0;
+  display: none;
+  min-width: 150px;
+  overflow: hidden;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: -90%;
+  z-index: -100;
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+}
 
 .dropdown-content:focus {
   outline: 0;
 }
 
+.profile_btn:hover{
+  color: rgb(29, 28, 28);
+}
 .dropdown-content li {
   clear: both;
   color:white;;
@@ -5572,10 +5591,12 @@ button.btn-floating {
   line-height: 1.5rem;
   width: 100%;
   text-align: left;
+  
 }
 
 .dropdown-content li:hover, .dropdown-content li.active {
-  background-color: #eee;
+  background-color: rgb(134, 131, 131);
+  
 }
 
 .dropdown-content li:focus {
@@ -5589,7 +5610,7 @@ button.btn-floating {
 
 .dropdown-content li > a, .dropdown-content li > span {
   font-size: 16px;
-  color: #26a69a;
+  color: #d5e9e7;
   display: block;
   line-height: 22px;
   padding: 14px 16px;

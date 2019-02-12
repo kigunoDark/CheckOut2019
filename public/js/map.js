@@ -8,6 +8,7 @@ let platform = new H.service.Platform({
   useHTTPS: true
 });
 
+    
 const myInit = {
   method: "get"
 };
@@ -70,7 +71,7 @@ map.addEventListener("tap", function(evt) {
     let eventMarkerWindowDesc = document.querySelector("span#description");
     eventMarkerWindowDesc.innerText = eventMarkerDict[selectedMarker][0];
     eventMarkerWindowTitle.innerText = selectedMarker;
-    $("#eventMarkerWindow").modal();
+    $(".modal1").modal();
     checkInEvent();
   } else {
     console.log(eventCoords);
@@ -78,7 +79,7 @@ map.addEventListener("tap", function(evt) {
     let eventMarkerWindowlat = document.querySelector("input#lat");
     eventMarkerWindowlng.value = eventCoords.lng;
     eventMarkerWindowlat.value = eventCoords.lat;
-    $("#eventWindow").modal();
+    $(".modal").modal();
   }
 });
 
@@ -151,11 +152,11 @@ function deleteMarkerBtn() {
     delete eventMarkerDict[
       document.querySelector("h5#eventMarkerTitle").innerText
     ];
-    $("#eventMarkerWindow").modal("hide");
+    $("#modal2").modal("hide");
   } else {
     eventMarkerGroup.removeObject(eventMarkerDict[selectedMarker][1]);
     delete eventMarkerDict[selectedMarker];
-    $("#eventMarkerWindow").modal("hide");
+    $("#modal2").modal("hide");
   }
 }
 

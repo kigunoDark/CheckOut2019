@@ -12,6 +12,10 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link rel="stylesheet" href="css/map.css" type="text/css">
+
+ 
+    
 
 
   <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.0/mapsjs-ui.css?dp-version=1533195059" />
@@ -23,9 +27,16 @@
 
 </head>
 <body>
-  <nav class="navAnim"  role="navigation">
+  <nav class="if <%= pageTitle === 'CheckOut' ? 'navAnim ' : 'blackNav' %>" role="navigation">
+  <% if(pageTitle === "CheckOut") { %>
     <div class="nav-wrapper container">
+  <% } else { %>
+  <div class="nav-wrapper container-wrap">
+  <% } %>
       <a  id="logo-container" href="#advert" class="brand-logo menu"><img src="./images/logo.png"  class="checkout" ></a>
+      
+      <% if (pageTitle === 'CheckOut') { %>
+
       <ul class="right hide-on-med-and-down">
         <li><a class="menu" href="#project">О проекте</a></li>
         <li><a class="menu" href="#team">О нас</a></li>
@@ -34,21 +45,43 @@
         <li class="login"><a class="menu dropdown-trigger btn " data-target='dropdown1' href="#">Войти</a></li>
 
         <ul id='dropdown1' class='dropdown-content'>
-        <form class="log" action="/login", method="POST"> 
-        <div class="container">
-            <p>
-                <h5 class="center" style="font-weight: bold;"> Вход </h5>
-                    <input  id="autocomplete-input" class="autocomplete" type="text" name="username" placeholder="Логин"> <br />
-                    <input  id="autocomplete-input" class="autocomplete" type="text" name="username" placeholder="Пароль"> 
-                <button  class="admSubmit " type="submit"> Submit</button>
-            </p>
-        </div>
-    </form>
+            <form class="log" action="/signin", method="POST"> 
+            <div class="container">
+                <p>
+                    <h5 class="center" style="font-weight: bold;"> Вход </h5>
+                        <input  id="autocomplete-input" class="autocomplete"  type="text" id="sliderlogin" placeholder="Email" name="email"> <br />
+                        <input  id="autocomplete-input" class="autocomplete" type="password" name="password" id="sliderpass" placeholder="Пароль" placeholder="Пароль"> 
+                    <button  class="admSubmit " type="submit"> Submit</button>
+                </p>
+            </div>
+            </form>
        </ul>
       </ul>
 
+      <%} else if(pageTitle === "CheckOut-Map" || pageTitle==="user-profile") {%>
+      <ul class="right profile hide-on-med-and-down">
+     
+  
+      <li class=" dropdown-trigger  " data-target='dropdown1'>  <a href="#"> <span id="name"> Владислав  </span> <i class="far fa-address-card"></i> </a></li>
+
+      <ul id='dropdown1' class='dropdown-content2'>
+      <ul class="right hide-on-med-and-down">
+      <li> <a href="/checkout-map" class="profile_btn" id="sliderpev"> <i class="fas fa-star-half-alt"></i> События </a> </li>
+      <li> <a href="/checkout-profile" class="profile_btn" id="sliderpev"> <i class="far fa-user-circle"></i> Профиль </a> </li>
+           <li> <a href="#" class="profile_btn" id="sliderpadw"><i class="fas fa-award"></i> Награды</a> </li>
+            <li> <a href="#" class="profile_btn" id="sliderprt"><i class="fas fa-crown"></i> Рейтинг</a> </li>
+            <li><a class="menu"href="/logout"><i class="fas fa-sign-out-alt"></i> Выход</a></li>
+      </ul>
+     </ul>
+    </ul>
+
+      <%}%>
       <ul id="nav-mobile" class="sidenav">
-        <li><a href="#">Navbar Link</a></li>
+            <li><a class="menu" href="#project">О проекте</a></li>
+            <li><a class="menu" href="#team">О нас</a></li>
+            <li><a class="menu" href="#contacts">Контакты</a></li>
+            <li><a class="menu" href="#register">Регистрация</a></li>
+            <li><a class="menu" href="/login">Вход</a></li>
         
       </ul>
       <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>

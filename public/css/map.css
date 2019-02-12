@@ -1,0 +1,70 @@
+#map {
+  width: 100%;
+  height: 100vh;
+}
+
+#lng {
+}
+.noneNeed {
+  display: none;
+}
+#deleteRoutBtn {
+  display: inline-block;
+}
+
+.navig {
+  position: absolute;
+  top: 110px;
+  left: 10px;
+  width: 35px;
+  z-index: 200;
+  cursor: pointer;
+}
+
+.modal-title_map {
+  background: #64a0c2;
+  color: white;
+  text-transform: uppercase;
+}
+
+#modal_address {
+  display: block;
+  font-size: 20px;
+  color: #777;
+}
+
+.manip_map {
+  cursor: pointer;
+  height: 40px;
+  font-size: 30px;
+}
+.manip_btn_map {
+  height: 40px;
+  font-size: 20px;
+  background: white;
+  color: black;
+  border-color: black;
+}
+.manip_btn_map:hover {
+  height: 40px;
+  font-size: 20px;
+  background: #64a0c2;
+  color: white;
+  border-color: white;
+}
+.modal-dialog-centered {
+  border-radius: 1%;
+}
+.event_map {
+  margin: 3% 0 3% 0;
+  height: 50px;
+  font-size: 30px;
+}
+
+#eventForm_map {
+  padding: 5%;
+}
+#eventWindowTitle_map {
+  font-size: 50px;
+  padding: 0% 0% 0% 5%;
+}

@@ -1,12 +1,29 @@
 <%- include('./layouts/navbar.ejs')%>
 
-<div class="container">
+<div class="container-wrap">
   <img src="./images/gps.svg" alt="gps" class="navig" onclick="toMyPos()" />
-  <div id="map"></div>
+  <div  class=" modal-trigger"  href="#modal2" id="map"></div>
   <script src="./js/map.js"></script>
 
+
+ 
+ 
+
+  <!-- Modal Structure -->
+  <div class="modal">
+    <div class="modal-content">
+      <h4>Modal Header</h4>
+      <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>
+
+
+
   <!-- Event window -->
-  <div class="modal fade" id="eventWindow" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div  class="modal"  id="modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header modal-title_map">
@@ -16,23 +33,17 @@
           </button>
         </div>
         <div class="modal-body">
-          <form id="eventForm_map" method="post" action="/checkout">
+          <form id="eventForm_map" method="post" action="/add-event">
             <input type="text" class="form-control event_map" id="eventName" name="evName" placeholder="Название события">
             <input type="text" class="form-control event_map" id="eventDesc" name="evInfo" placeholder="Описание события">
+            <input type="text" class="form-control event_map" id="evType" name="evType" placeholder="Тип события">
+
             <input type="text" class="form-control event_map noneNeed" id="lng" name="lng">
             <input type="text" class="form-control event_map noneNeed" id="lat" name="lat">
-            <select class="select_mod_wnd" id="slct_mod" name="evType">
-              <option>Фестиваль</option>
-              <option>Выставка</option>
-              <option>Концерт</option>
-              <option>Трансляция</option>
-              <option>Конфернеция</option>
-              <option>Вечеринка</option>
-              <option>Деловое Мероприятие</option>
-              <option>Другое</option>
-            </select>
-            {{!-- <a data-dismiss="modal"><i class="fas fa-times-circle manip_map"></i></a>
-            <a><i class="fas fa-plus-circle manip_map"></i></a> --}}
+          
+           
+           <a data-dismiss="modal"><i class="fas fa-times-circle manip_map"></i></a>
+            <a><i class="fas fa-plus-circle manip_map"></i></a> 
             <button onclick="saveBtn()" class="btn_reg_su">Зарегистрироваться</button>
           </form>
 
@@ -43,7 +54,7 @@
   </div>
 
   <!-- Event marker window -->
-  <div class="modal fade" id="eventMarkerWindow" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  <div class="modal" id="modal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">

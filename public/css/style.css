@@ -63,6 +63,9 @@ hr {
  #team{
    margin-top: -1.5%;
  }
+ .progile{
+   margin-top: -10px;
+ }
  .teamLogo{
       background-size:cover;
       background-attachment: fixed; 
@@ -77,19 +80,12 @@ hr {
   padding: 5%;
   margin-bottom: 5%;
 }
- .dropdown-trigger{
+.profile{
+  margin-right: 5%;
+}
 
-   background: #01a4e2;
-   text-align: center;
-   border-radius: 5%;
-   border: 2px solid white;
- }
-
- .dropdown-trigger:hover{
-  background: white;
-  color: #01a4e2;
-  border: 2px solid #01a4e2;
-  border-radius: 0%;
+#name{
+  font-size: 20px;
 }
  .crons{
   box-shadow: 0 8px 6px -6px black;
@@ -116,12 +112,24 @@ hr {
   height: 15%;
   transition: 0.5s;
 }
-.blackNav{
-  background: rgba(0, 0, 0, 1);
-  border-bottom: 3px solid #01a4e2;
- 
+.map{
+  z-index: 3;
 }
-
+.profilePage{
+  padding-top: 15%;
+  padding-bottom: 15%;
+}
+.blackNav{
+  background: #1f1c1c;
+  border-bottom: 3px solid #01a4e2;
+  position: fixed;
+  z-index: 1;
+  height: 14%;
+  transition: 0.5s;
+}
+nav{
+  z-index: 2;
+}
 nav ul a,
 nav .brand-logo {
   color: white;
